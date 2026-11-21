@@ -1,6 +1,6 @@
 # 工時手札
 
-**繁體中文** | [English](README.en.md)
+**繁體中文** | [简体中文](README.zh-CN.md) | [English](README.en.md)
 
 **把專注時間、工作內容與工時報表，留在同一個桌面工具裡。**
 

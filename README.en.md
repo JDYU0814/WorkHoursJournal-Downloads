@@ -1,6 +1,6 @@
 # Work Hours Journal
 
-[繁體中文](README.md) | **English**
+[繁體中文](README.md) | [简体中文](README.zh-CN.md) | **English**
 
 **Keep your focus sessions, work notes, and time reports together.**
 
