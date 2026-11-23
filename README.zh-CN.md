@@ -6,13 +6,21 @@
 
 工时手札是一款 Windows 桌面工具，结合番茄钟、正向工时计时、客户／项目分类、工作摘要与附件，并可将记录导出成 Excel。适合需要记录每天做了什么、整理项目投入时间，或汇总可计费工时的人使用。
 
-**[下载 v0.5.2 可执行文件](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/download/v0.5.2/WorkHoursJournal-multilingual.exe)** · [查看最新版本](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/latest) · [版本说明](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/tag/v0.5.2)
+**[下载 v0.5.4 可执行文件](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/download/v0.5.4/WorkHoursJournal-0.5.4-shutdown.exe)** · [查看最新版本](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/latest) · [版本说明](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/tag/v0.5.4)
 
 Windows x64｜繁体中文・简体中文・English｜便携运行｜数据保存在本机
 
 <p align="center">
   <img src="images/timer-simplified.png" alt="工时手札简体中文主画面，提供番茄钟、工时统计与工作摘要" width="408">
 </p>
+
+## v0.5.4 关机处理更新
+
+- 加强关机及取消关机时的工作保存、后台服务暂停与恢复，以及窗口回调的异常处理。
+- 如果关机处理再次出错，会在 `%LOCALAPPDATA%\WorkHoursJournal\desktop.log` 记录完整异常，供后续排查。
+- 已通过 144 项核心／导出检查和 150 项打包后界面检查，其中包含 31 项关机专项；测试进程正常退出。
+- **实际整机关机仍待验证，尚未确认先前关机错误的根因或完全排除问题。**
+- 更新前请从系统托盘选择“结束程序”，再打开新版；旧快捷方式如仍指向旧文件，请改为新版路径。本地工时数据和设置继续保留。
 
 ## 可以做什么？
 
@@ -31,10 +39,10 @@ Windows x64｜繁体中文・简体中文・English｜便携运行｜数据保�
 
 | 项目 | 说明 |
 | --- | --- |
-| 目前版本 | **v0.5.2**，可执行文件版本 `0.5.2.0` |
+| 目前版本 | **v0.5.4**，可执行文件版本 `0.5.4.0` |
 | 操作系统 | Windows x64；目标使用环境为 Windows 11 |
-| 下载文件 | [`WorkHoursJournal-multilingual.exe`](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/download/v0.5.2/WorkHoursJournal-multilingual.exe) |
-| 文件大小 | 约 **177.45 MiB**（186,066,574 bytes） |
+| 下载文件 | [`WorkHoursJournal-0.5.4-shutdown.exe`](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/download/v0.5.4/WorkHoursJournal-0.5.4-shutdown.exe) |
+| 文件大小 | 约 **177.49 MiB**（186,115,726 bytes） |
 | 安装方式 | 单一便携可执行文件，下载后直接打开；已包含 .NET 运行时，不需另外安装 .NET |
 
 1. 下载上方的 `.exe`，放到方便保留的位置后打开。
@@ -48,7 +56,7 @@ Windows x64｜繁体中文・简体中文・English｜便携运行｜数据保�
 
 ## 操作画面
 
-以下均为测试数据截图，客户、项目与附件仅用于演示。报表和手动补登截图使用繁体中文界面；主画面与设置截图使用简体中文界面。窗口标题的 `0.5` 为系列版本，下载可执行文件的完整版本为 `0.5.2.0`。
+以下均为测试数据截图，客户、项目与附件仅用于演示。报表和手动补登截图使用繁体中文界面；主画面与设置截图使用简体中文界面。窗口标题的 `0.5` 为系列版本，下载可执行文件的完整版本为 `0.5.4.0`。
 
 ### 日期查找、客户分类与工作摘要
 
@@ -123,7 +131,7 @@ Windows x64｜繁体中文・简体中文・English｜便携运行｜数据保�
 ## 常见问题
 
 **下载页面该选哪个文件？**  
-请下载 `WorkHoursJournal-multilingual.exe`。GitHub 显示的「Source code (zip)」及「Source code (tar.gz)」只包含此下载 repo 的说明、截屏及授权文档，不是可运行程序，也不包含本产品的程序源代码。
+请下载 `WorkHoursJournal-0.5.4-shutdown.exe`。GitHub 显示的「Source code (zip)」及「Source code (tar.gz)」只包含此下载 repo 的说明、截屏及授权文档，不是可运行程序，也不包含本产品的程序源代码。
 
 **需要安装 .NET 或 Microsoft Excel 才能使用吗？**  
 不需要另装 .NET。程序本身与产生 Excel 报表不依赖本机安装 Microsoft Excel；要打开导出的 `.xlsx`，可使用支持该格式的电子表格软件。
@@ -139,21 +147,21 @@ Windows x64｜繁体中文・简体中文・English｜便携运行｜数据保�
 
 ## 版本核对
 
-目前 v0.5.2 已通过 **144 项核心／导出检查**与 **128 项打包后界面检查**。混合 DPI、多屏幕、实机睡眠唤醒及整机关机等行为仍需依实际设备验收。
+目前 v0.5.4 已通过 **144 项核心／导出检查**与 **150 项打包后界面检查**。混合 DPI、多屏幕、实机睡眠唤醒及整机关机等行为仍需依实际设备验收。
 
 <details>
-<summary>检查 v0.5.2 可执行文件的 SHA-256</summary>
+<summary>检查 v0.5.4 可执行文件的 SHA-256</summary>
 
-可执行文件版本：`0.5.2.0`，大小：`186066574` bytes。
+可执行文件版本：`0.5.4.0`，大小：`186115726` bytes。
 
 ```text
-B3A8A30AE78AB558F3E9F5D2334923FF39DAD7AED1B1FACF5ED92E5CCA5E3049
+65AB63B6E0367B633EB26AEE13E78A80AE1CC79D8EFD6071A5F107F54DECFCCD
 ```
 
 可在可执行文件所在文件夹使用 PowerShell 核对：
 
 ```powershell
-Get-FileHash .\WorkHoursJournal-multilingual.exe -Algorithm SHA256
+Get-FileHash .\WorkHoursJournal-0.5.4-shutdown.exe -Algorithm SHA256
 ```
 
 </details>

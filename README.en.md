@@ -6,13 +6,21 @@
 
 Work Hours Journal (工時手札) is a Windows desktop app that combines a Pomodoro timer, elapsed-time tracking, customer and project organization, work summaries, and attachments. Use it to record what you worked on, review time spent on projects, and export billable hours to Excel.
 
-**[Download v0.5.2 for Windows](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/download/v0.5.2/WorkHoursJournal-multilingual.exe)** · [Latest release](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/latest) · [Release notes](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/tag/v0.5.2)
+**[Download v0.5.4 for Windows](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/download/v0.5.4/WorkHoursJournal-0.5.4-shutdown.exe)** · [Latest release](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/latest) · [Release notes](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/tag/v0.5.4)
 
 Windows x64 | Traditional Chinese · Simplified Chinese · English | Portable executable | Local data storage
 
 <p align="center">
   <img src="images/timer-english.png" alt="Work Hours Journal in English, showing Pomodoro, Time tracking, and Work summary" width="460">
 </p>
+
+## v0.5.4 shutdown handling update
+
+- Improves work saving, background-service suspension and recovery, and exception handling in shutdown and cancellation callbacks.
+- If shutdown handling fails again, full exception details are recorded in `%LOCALAPPDATA%\WorkHoursJournal\desktop.log` for investigation.
+- Passed 144 core/export checks and 150 packaged UI checks, including 31 shutdown checks; the test process exited normally.
+- **Full Windows shutdown still needs validation. The root cause of the reported shutdown crash has not yet been confirmed, and the issue is not confirmed fully resolved.**
+- Choose **Exit** from the system tray before opening the new executable. Update shortcuts that still point to the old file. Existing local records and settings are reused.
 
 ## Features
 
@@ -31,10 +39,10 @@ Windows x64 | Traditional Chinese · Simplified Chinese · English | Portable ex
 
 | Item | Details |
 | --- | --- |
-| Current release | **v0.5.2**, executable version `0.5.2.0` |
+| Current release | **v0.5.4**, executable version `0.5.4.0` |
 | Operating system | Windows x64; the target environment is Windows 11 |
-| Download | [`WorkHoursJournal-multilingual.exe`](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/download/v0.5.2/WorkHoursJournal-multilingual.exe) |
-| File size | Approximately **177.45 MiB** (186,066,574 bytes) |
+| Download | [`WorkHoursJournal-0.5.4-shutdown.exe`](https://github.com/JDYU0814/WorkHoursJournal-Downloads/releases/download/v0.5.4/WorkHoursJournal-0.5.4-shutdown.exe) |
+| File size | Approximately **177.49 MiB** (186,115,726 bytes) |
 | Installation | Download and run the single executable. The .NET runtime is included; no separate .NET installation is required. |
 
 1. Download the `.exe`, keep it in a convenient location, and open it.
@@ -49,7 +57,7 @@ Windows x64 | Traditional Chinese · Simplified Chinese · English | Portable ex
 
 ## Screenshots
 
-All screenshots use sample data. The `0.5` shown in the window header identifies the release series; the downloadable executable's full version is `0.5.2.0`.
+All screenshots use sample data. The `0.5` shown in the window header identifies the release series; the downloadable executable's full version is `0.5.4.0`.
 
 ### Date queries, customer tabs, and work summaries
 
@@ -124,7 +132,7 @@ To back up your data, exit the app completely and copy the entire folder so reco
 ## Frequently asked questions
 
 **Which file should I download?**  
-Download `WorkHoursJournal-multilingual.exe`. GitHub's **Source code (zip)** and **Source code (tar.gz)** links contain only this download repository's documentation, screenshots, and license notices. They are not runnable apps and do not include the product's application source code.
+Download `WorkHoursJournal-0.5.4-shutdown.exe`. GitHub's **Source code (zip)** and **Source code (tar.gz)** links contain only this download repository's documentation, screenshots, and license notices. They are not runnable apps and do not include the product's application source code.
 
 **Do I need .NET or Microsoft Excel installed?**  
 No separate .NET installation is needed. Running the app and generating Excel reports do not require Microsoft Excel. To open an exported `.xlsx` file, use spreadsheet software that supports the format.
@@ -140,21 +148,21 @@ Elapsed-time tracking waits for you to resume after sleep. Pomodoro sessions rec
 
 ## Version verification
 
-v0.5.2 passed **144 core/export checks** and **128 UI checks against the packaged executable**. Mixed-DPI displays, multiple monitors, physical sleep/wake cycles, and full system shutdown behavior still require validation on the actual devices used.
+v0.5.4 passed **144 core/export checks** and **150 UI checks against the packaged executable**. Mixed-DPI displays, multiple monitors, physical sleep/wake cycles, and full system shutdown behavior still require validation on the actual devices used.
 
 <details>
-<summary>Verify the v0.5.2 executable's SHA-256</summary>
+<summary>Verify the v0.5.4 executable's SHA-256</summary>
 
-Executable version: `0.5.2.0`. Size: `186066574` bytes.
+Executable version: `0.5.4.0`. Size: `186115726` bytes.
 
 ```text
-B3A8A30AE78AB558F3E9F5D2334923FF39DAD7AED1B1FACF5ED92E5CCA5E3049
+65AB63B6E0367B633EB26AEE13E78A80AE1CC79D8EFD6071A5F107F54DECFCCD
 ```
 
 Run the following in PowerShell from the executable's folder:
 
 ```powershell
-Get-FileHash .\WorkHoursJournal-multilingual.exe -Algorithm SHA256
+Get-FileHash .\WorkHoursJournal-0.5.4-shutdown.exe -Algorithm SHA256
 ```
 
 </details>
